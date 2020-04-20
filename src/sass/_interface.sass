@@ -1,3 +1,6 @@
+* 
+    box-sizing: border-box
+
 body 
     +reg
 
@@ -9,6 +12,25 @@ body
     border: none
     border-radius: 10px
     background-color: $main-color
+    padding: 17px 28px
+    +bold
+    &:hover
+        cursor: pointer
+        background-color: lighten($main-color, 10%)
+
+.section
+    padding: 90px 0
+    &-title
+        font-size: 24px
+        +bold
+    &-subtitle
+        display: block
+        font-size: 16px
+.input
+    border: 1px solid $border-input
+    padding: 20px 26px
+    font-size: 15px
+    border-radius: 10px
 
 @media (max-width: 1200px)
     .container

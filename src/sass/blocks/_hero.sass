@@ -1,5 +1,5 @@
 .hero
-    padding: 90px 0 90px 0
+    padding: 50px 0 90px 0
     color: $text-color
     background-color: $bg-color
     &-block
@@ -7,7 +7,6 @@
         justify-content: space-between
     &-text
         flex-basis: 50%
-        padding-right: 120px
         &__title
             margin-bottom: 38px
             font-size: 41px
@@ -25,6 +24,8 @@
             display: flex
             align-items: center
             margin-bottom: 25px
+            &:last-child
+                margin-bottom: 0
         &__image
             width: 40px
             height: 40px
@@ -38,6 +39,7 @@
             max-width: 300px
     &-image img
         max-width: 100%
+        margin-left: 50px
 
 @media (max-width: 1200px)
     .hero
@@ -49,6 +51,8 @@
                 font-size: 30px
         &-list
             margin-bottom: 40px
+        &-image img
+            margin-left: 0
 
 @media (max-width: 768px)
     .hero
