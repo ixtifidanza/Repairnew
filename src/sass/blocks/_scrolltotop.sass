@@ -1,0 +1,19 @@
+.scrolltotop
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: $main-color;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    transition: all .5s;
+    display: none;
+    text-align: center;  
+    &:after
+        content: '⇧';
+        color: white;
+        line-height: 40px;
+    &:hover
+        box-shadow: 0 0 10px rgba(0,0,0,.4);
