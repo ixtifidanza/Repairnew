@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Ремонт квартир</title>
 </head>
@@ -33,7 +34,7 @@
     </nav>
     <!-- /.navbar -->
 
-    <mian>
+    <main>
 
         <section class="hero">
             <div class="container">
@@ -117,7 +118,49 @@
         </section>
         <!-- /.offer -->
 
-    </mian>
+        <section class="section portfolio">
+            <div class="container">
+
+                <h2 class="section-title portfolio__title">
+                    Работая с 2007 года, мы сделали более 500 ремонтов в квартирах и домах
+                </h2>
+
+                <div class="slider">
+                    <div class="slider__item">
+                        <img class="slider__image" src="img/slider_1.jpg" alt="slider">
+                    </div>
+                    <div class="slider__item">
+                        <img class="slider__image" src="img/slider_2.jpg" alt="slider">
+                    </div>
+                    <div class="slider__item">
+                        <img class="slider__image" src="img/slider_3.jpg" alt="slider">
+                    </div>
+                    <div class="slider__item">
+                        <img class="slider__image" src="img/slider_1.jpg" alt="slider">
+                    </div>
+                    <div class="slider__item">
+                        <img class="slider__image" src="img/slider_2.jpg" alt="slider">
+                    </div>
+                    <div class="slider__item">
+                        <img class="slider__image" src="img/slider_3.jpg" alt="slider">
+                    </div>
+                </div>
+
+                <div class="arrows">
+                    <div class="arrows__left">
+                        <img src="img/left-arrow.png" alt="">
+                    </div>
+                    <div class="arrows__right">
+                        <img src="img/right-arrow.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /.section portfolio -->
+
+    </main>
 
     <div class="modal" id="modal">
         <div class="modal-dialog">
@@ -134,5 +177,33 @@
     <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <script src="js/modal.js"></script>
     <script src="js/scroll.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script>
+        $(function() {
+            $('.slider').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                prevArrow: $('.arrows__left'),
+                nextArrow: $('.arrows__right'),
+                responsive: [
+                    {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                    },
+                    {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                    },
+                ]
+            });
+        });
+    </script>
 </body>
 </html>

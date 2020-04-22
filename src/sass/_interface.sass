@@ -22,6 +22,8 @@ body
     padding: 90px 0
     &-title
         font-size: 24px
+        text-align: center
+        color: $text-color
         +bold
     &-subtitle
         display: block
@@ -31,6 +33,10 @@ body
     padding: 20px 26px
     font-size: 15px
     border-radius: 10px
+.arrows
+    &__left, &__right
+        &:hover
+            cursor: pointer
 
 @media (max-width: 1200px)
     .container
