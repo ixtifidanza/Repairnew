@@ -651,10 +651,12 @@ body {
 }
 
 .about__text {
-  width: 146px;
+  width: 155px;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
 }
 
 @media (max-width: 1200px) {
@@ -679,6 +681,27 @@ body {
   }
   .about__text {
     margin: 15px 0;
+  }
+}
+
+.banner {
+  background-color: #ffc000;
+}
+
+.banner__title {
+  color: #000;
+  max-width: 907px;
+  margin: auto;
+  font-size: 32px;
+  line-height: 50px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .banner__title {
+    font-size: 18px;
+    line-height: 1.1;
   }
 }
 /*# sourceMappingURL=style.css.map */
