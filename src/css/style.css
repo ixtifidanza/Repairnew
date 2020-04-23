@@ -69,6 +69,11 @@ body {
   border-radius: 10px;
 }
 
+.input:focus {
+  outline: none;
+  border: 1px solid #ffd200;
+}
+
 .arrows__left:hover, .arrows__right:hover {
   cursor: pointer;
 }
@@ -83,6 +88,9 @@ body {
   .container {
     max-width: 580px;
     width: 90%;
+  }
+  .section {
+    padding: 60px 0;
   }
 }
 
@@ -322,11 +330,6 @@ body {
 .offer__input {
   width: 240px;
   margin-bottom: 30px;
-}
-
-.offer__input:focus {
-  outline: none;
-  border: 1px solid #ffd200;
 }
 
 .offer__input:first-child {
@@ -593,6 +596,9 @@ body {
   .price__card:last-child {
     margin-bottom: 0;
   }
+  .card__image img {
+    max-width: 100%;
+  }
 }
 
 .about__title {
@@ -756,6 +762,9 @@ body {
     margin: auto;
     margin-bottom: 30px;
   }
+  .help__image {
+    max-width: 100%;
+  }
 }
 
 .contract__title {
@@ -820,8 +829,183 @@ body {
     margin: auto;
     margin-bottom: 44px;
   }
+  .contract__title {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+  .contract__text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .contract__title {
+    font-size: 18px;
+    line-height: 1.2;
+  }
   .contract__text {
     font-size: 14px;
+  }
+}
+
+.brif {
+  background: url("../img/brif-color-bg.jpg"), url("../img/brif_bg.jpg");
+  background-position: left center, center right;
+  background-size: 50%, contain;
+  background-repeat: repeat-y, no-repeat;
+}
+
+.brif-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.brif__interview {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.brif__form {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding-left: 200px;
+  text-align: center;
+}
+
+.brif__input {
+  width: 100%;
+  max-width: 370px;
+  margin-bottom: 15px;
+}
+
+.brif__btn {
+  width: 100%;
+  height: 70px;
+  max-width: 370px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.interview {
+  padding-right: 70px;
+  color: #000;
+}
+
+.interview__title {
+  font-size: 22px;
+  line-height: 33px;
+  margin-bottom: 50px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+.interview__subtitle {
+  display: block;
+  margin-bottom: 95px;
+  font-size: 16px;
+}
+
+.interview-list {
+  list-style: none;
+  padding: 0;
+}
+
+.interview-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 25px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+.interview-list__counter {
+  display: inline-block;
+  margin-right: 30px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 35px;
+  width: 35px;
+  height: 35px;
+  border: 2px solid #000;
+  border-radius: 50%;
+}
+
+.interview-list__text {
+  max-width: 400px;
+}
+
+.form__title {
+  font-size: 22px;
+  line-height: 33px;
+  margin-bottom: 52px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+.form__subtitle {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.form__description {
+  display: block;
+  font-size: 15px;
+}
+
+@media (max-width: 1200px) {
+  .brif__form {
+    padding-left: 50px;
+  }
+  .interview {
+    padding-right: 30px;
+  }
+  .interview__title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .interview__subtitle {
+    margin-bottom: 30px;
+  }
+  .interview-list__counter {
+    margin-right: 20px;
+  }
+  .interview-list__text {
+    font-size: 14px;
+    max-width: 300px;
+  }
+  .form__title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .form__subtitle {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .brif {
+    background-position: top center, bottom center;
+    background-size: 100% 50%, cover;
+    background-repeat: repeat-x, no-repeat;
+  }
+  .brif-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .brif__form {
+    margin-top: 80px;
+    padding-left: 0;
+  }
+  .interview {
+    padding-right: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
