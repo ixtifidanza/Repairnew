@@ -667,6 +667,9 @@ body {
   .about__item:after {
     display: none;
   }
+  .about__logos {
+    margin-left: 25px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -702,6 +705,123 @@ body {
   .banner__title {
     font-size: 18px;
     line-height: 1.1;
+  }
+}
+
+.help-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.help__item {
+  position: relative;
+  width: 370px;
+  height: 410px;
+  background-color: #f7f7f7;
+}
+
+.help__text {
+  display: block;
+  padding: 20px;
+  max-width: 280px;
+  color: #000;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.help__strong {
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+.help__image {
+  position: absolute;
+  bottom: 0;
+  max-width: 100%;
+  background: url("../img/help_bg.png") no-repeat bottom center;
+}
+
+@media (max-width: 1200px) {
+  .help-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .help__item {
+    margin: auto;
+    margin-bottom: 30px;
+  }
+}
+
+.contract__title {
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 100px;
+  font-size: 30px;
+  line-height: 45px;
+  color: #000;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+.contract-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contract__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 270px;
+  height: 360px;
+  background: #f5f5f5;
+  margin-left: 15px;
+  margin-bottom: 41px;
+}
+
+.contract__text {
+  display: block;
+  max-width: 300px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000;
+}
+
+@media (max-width: 1200px) {
+  .contract-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contract__image {
+    margin-bottom: 31px;
+  }
+  .contract__item {
+    margin: auto;
+    margin-bottom: 44px;
+  }
+  .contract__text {
+    font-size: 14px;
   }
 }
 /*# sourceMappingURL=style.css.map */
