@@ -2,8 +2,10 @@
     background: $bg-color url('../img/portfolio-pattern.jpg') repeat-y center left
     background-size: 50%
     &__title
+        max-width: 786px
         margin: auto
         margin-bottom: 100px
+        font-size: 30px
 .arrows
     display: flex
     max-width: 120px
@@ -13,9 +15,18 @@
 .slider
     &__item
         &:hover
-            cur
+            cursor: pointer
         &:focus
             outline: none
     &__image
         margin: auto
+
+@media (max-width: 1200px)
+    .portfolio
+        &__title
+            font-size: 26px
+@media (max-width: 768px)
+    .portfolio
+        &__title
+            font-size: 22px
             

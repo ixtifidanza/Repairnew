@@ -102,9 +102,9 @@
                         Оставьте заявку на разработку бесплатного дизайн-проекта!
                     </span>
                     <!-- /.section-subtitle -->
-                    <form action="/" class="form offer__form">
-                        <input class="input offer__input" type="text" placeholder="Ваше имя">
-                        <input class="input offer__input" type="tel" placeholder="Ваш телефон">
+                    <form action="/" class="form offer__form" id="form">
+                        <input class="input offer__input" name='username' type="text" placeholder="Ваше имя">
+                        <input class="input offer__input phone" name='phone' type="tel" placeholder="Ваш телефон">
                         <button class="btn offer__btn">Получить бесплатный дизайн-проект</button>
                     </form>
                     <div class="offer__call">
@@ -434,9 +434,9 @@
                         <span class="form__subtitle">
                             Для этого заполните форму ниже
                         </span>
-                        <form action="#">
-                            <input class="input brif__input" type="text" placeholder="Ваше имя">
-                            <input class="input brif__input" type="tel" placeholder="Ваш телефон">
+                        <form action="#" id="form">
+                            <input class="input brif__input" name="username" type="text" placeholder="Ваше имя">
+                            <input class="input brif__input phone" name="phone" type="tel" placeholder="Ваш телефон">
                             <button class="btn brif__btn">Рассчитать стоимость</button>
                             <span class="form__description">
                                 Мы перезвоним Вам в течение 60 секунд
@@ -453,6 +453,54 @@
         <!-- /.section brif -->
 
     </main>
+
+    <footer class="footer">
+        <div class="map" id="map">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abce8625d9fbe746f7b29420847c843f9218097eb89573622f89613eff6388532&amp;width=100%25&amp;height=640&amp;lang=ru_RU&amp;scroll=false"></script>
+        </div>
+
+        <div class="container">
+            <div class="contacts-block">
+                <div class="contacts">
+                    <h3 class="contacts__title">
+                        Приезжайте к нам в гости! Проконсультируем Вас по всем вопросам ремонта
+                    </h3>
+                    <ul class="contacts-list">
+                        <li class="contacts-list__item">
+                            <span class="contacts-list__icon">
+                                <img src="img/map.png" alt="">
+                            </span>
+                            <span class="contacts-list__text">
+                                г. Москва <br>
+                                <span class="text-bold">ул. Ленинга, <br>
+                                д. 10,корпус 2, оф. 308</span>
+                            </span>
+                        </li>
+                        <li class="contacts-list__item">
+                            <span class="contacts-list__icon">
+                                <img src="img/clock-with-white-face.png" alt="">
+                            </span>
+                            <span class="contacts-list__text">
+                                Режим работы: <br>
+                                <span class="text-bold">с 9:00 до 18:00</span>
+                            </span>
+                        </li>
+                        <li class="contacts-list__item">
+                            <span class="contacts-list__icon">
+                                <img src="img/phone-call-button.png" alt="">
+                            </span>
+                            <span class="contacts-list__text">
+                                Телефон: <br>
+                               <span class="text-bold"><a href="tel:+7(495)42-251-31">+ 7 (495) 42-251-31</a></span> 
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.contacts -->
+            </div>
+            <!-- /.contacts-block -->
+        </div>
+    </footer>
 
     <div class="modal" id="modal">
         <div class="modal-dialog">
@@ -472,8 +520,34 @@
     <script src="js/scroll.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
     <script>
         $(function () {
+
+            $('.phone').mask('+998 (00) 000-00-00', {placeholder: "+998 (__) ___-__-__"});
+
+            $('#form').validate({
+                rules: {
+                    username: {
+                        required: true,
+                        minlength: 2
+                    },
+                    phone: {
+                        required: true,
+                    }
+                },
+                    messages: {
+                        username: {
+                            required: 'Укажите имя пожалуйста!',
+                            minlength: jQuery.validator.format("Должно быть: {0} символов ")
+                        },
+                        phone: {
+                            required: 'Укажите телефон номер пожалуйста!'
+                        }
+                    }
+            });
+
             new WOW().init();
 
             $('.slider').slick({
