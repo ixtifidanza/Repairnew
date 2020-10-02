@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/animate.css">
     <title>Ремонт квартир</title>
 </head>
 
@@ -30,17 +32,18 @@
                             class="hero-text__subtitle">с гарантией качества, прописанной в договоре</span>
                         <ul class="hero-list">
                             <li class="hero-list__item">
-                                <div class="hero-list__image"><img src="img/clock.png" alt="clock"></div><span
-                                    class="hero-list__text">Точно соблюдаем сроки</span>
+                                <div class="hero-list__image first-item"><img src="img/clock.png" alt="clock"></div>
+                                <span class="hero-list__text">Точно соблюдаем сроки</span>
                             </li>
                             <li class="hero-list__item">
                                 <div class="hero-list__image"><img src="img/calculator.png" alt="calculator"></div><span
-                                    class="hero-list__text">Рассчитаем смету на работы и материалы в день
+                                    class="hero-list__text">Рассчитаем смету на работы <br> и материалы в день
                                     обращения</span>
                             </li>
                             <li class="hero-list__item">
                                 <div class="hero-list__image"><img src="img/paint-board.png" alt="paint-board"></div>
-                                <span class="hero-list__text">Предложим более 100 вариантов исполнения дизайна Вашего
+                                <span class="hero-list__text">Предложим более 100 вариантов <br> исполнения дизайна
+                                    Вашего
                                     жилья</span>
                             </li>
                         </ul>
@@ -52,9 +55,9 @@
         <section class="offer section">
             <div class="container">
                 <div class="offer-block">
-                    <h2 class="section-title offer__title">Мы бесплатно разработаем дизайн-проект Вашего жилья и
+                    <h2 class="offer__title">Мы бесплатно разработаем <br> дизайн-проект Вашего жилья <br> и
                         реализуем его!</h2><!-- /.section-title --> <span
-                        class="section-subtitle offer__subtitle">Оставьте заявку на разработку бесплатного
+                        class="section-subtitle offer__subtitle">Оставьте заявку на разработку <br> бесплатного
                         дизайн-проекта! </span><!-- /.section-subtitle -->
                     <form action="/" class="form offer__form"><input class="input offer__input" required name="username"
                             type="text" placeholder="Ваше имя"> <input class="input offer__input phone" required
@@ -68,18 +71,95 @@
                 </div><!-- /.offer-block -->
             </div><!-- /.container -->
         </section><!-- /.offer -->
-       
-    <div class="modal" id="modal">
-        <div class="modal-dialog"><button class="modal-dialog__close" id="close">&times;</button>
-            <h4 class="modal-digalog__title">Всплывающее окно</h4>
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-    <div class="scrolltotop"></div><!-- <script src="js/script.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
-        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
-    <script src="js/modal.js"></script>
-        
-    
+        <section class="section portfolio">
+            <div class="container">
+                <h2 class="section-title portfolio__title">Работая с 2007 года,мы сделали более 500 ремонтов в квартирах
+                    и домах</h2>
+                <div class="slider">
+                    <div class="slider__item"><img class="slider__img" src="img/slider_1.jpg" alt=""></div>
+                    <div class="slider__item"><img class="slider__img" src="img/slider_2.jpg" alt=""></div>
+                    <div class="slider__item"><img class="slider__img" src="img/slider_3.jpg" alt=""></div>
+                    <div class="slider__item"><img class="slider__img" src="img/slider_1.jpg" alt=""></div>
+                    <div class="slider__item"><img class="slider__img" src="img/slider_2.jpg" alt=""></div>
+                    <div class="slider__item"><img class="slider__img" src="img/slider_3.jpg" alt=""></div>
+                </div>
+                <div class="arrows portfolio__arrows">
+                    <div class="arrows__left">
+                        <img src="img/left-arrow.png" alt="">
+                    </div>
+                    <div class="arrows__right">
+                        <img src="img/right-arrow.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section price">
+            <div class="container">
+                <h2 class="section-title price__title">У нас очень гибкая система скидок на комплексные работы!</h2>
+                <!-- /.section-title price__title -->
+                <span class="section-subtitle price__subtitle">Прайс на наши услуги</span>
+                <!-- /.section-subtitle price__subtitle -->
+                <div class="cards">
+                    <div class="card price__card">
+                        <div class="card__image"><img src="img/card_1.jpg" alt="bathroom"></div>
+                        <div class="card__text">
+                            <h4 class="card__title">Ремонт ванных комнат и с/у</h4>
+                            <a href="#" class="card__link">Узнать цены</a>
+                        </div>
+                    </div>
+                    <div class="card price__card">
+                        <div class="card__image"><img src="img/card_2.jpg" alt="badroom"></div>
+                        <div class="card__text">
+                            <h4 class="card__title">Ремонт комнат и квартир</h4>
+                            <a href="#" class="card__link">Узнать цены</a>
+                        </div>
+                    </div>
+                    <div class="card price__card">
+                        <div class="card__image"><img src="img/card_3.jpg" alt="office"></div>
+                        <div class="card__text">
+                            <h4 class="card__title">Отделка офисных помещений</h4>
+                            <a href="#" class="card__link">Узнать цены</a>
+                        </div>
+                    </div>
+                    <div class="card price__card">
+                        <div class="card__image"><img src="img/card_4.jpg" alt="badroom"></div>
+                        <div class="card__text">
+                            <h4 class="card__title">Ремонт в новостройках</h4>
+                            <a href="#" class="card__link">Узнать цены</a>
+                        </div>
+                    </div>
+                    <div class="card price__card">
+                        <div class="card__image"><img src="img/card_5.jpg" alt="chickenroom"></div>
+                        <div class="card__text">
+                            <h4 class="card__title">Ремонт кухонь</h4>
+                            <a href="#" class="card__link">Узнать цены</a>
+                        </div>
+                    </div>
+                    <div class="card price__card">
+                        <div class="card__image"><img src="img/card_6.jpg" alt="badroom"></div>
+                        <div class="card__text">
+                            <h4 class="card__title">Ремонт дач и коттеджей</h4>
+                            <a href="#" class="card__link">Узнать цены</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /.section price -->
+
+        <div class="modal" id="modal">
+            <div class="modal-dialog"><button class="modal-dialog__close" id="close">&times;</button>
+                <h4 class="modal-dialog__title">Всплывающее окно</h4>
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <div class="scrolltotop"></div><!-- <script src="js/script.js"></script> -->
+        <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+            integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+            <script src="js/slick.min.js"></script>
+            <script src="js/modal.js"></script>
+            <script src="js/main.js"></script>
 </body>
 
 </html>
